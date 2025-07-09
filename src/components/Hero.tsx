@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden" 
              style={{
-               backgroundImage: `url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+               backgroundImage: `url('/img/448583461_990093979789660_3271476276578368938_n-1-lyvwug9r.jpg')`
              }}>
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
       
       <div className="relative container mx-auto px-4 py-20 flex flex-col items-center justify-center text-center min-h-screen">
         <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">

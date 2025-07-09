@@ -10,33 +10,60 @@ const SportSections = () => {
       ageGroup: "6-13 lat",
       schedule: "Wt, Czw 17:00-18:30",
       icon: "⚽",
-      link: "/pilka-nozna-dziewczat"
+      link: "https://checzgdynia.sportbm.com/",
+      image: "/img/pilka.jpg"
     },
     {
       title: "Cheerleading",
       description: "Taniec, akrobatyka i doping sportowy. Rozwijamy grację, siłę i pewność siebie.",
       ageGroup: "8-16 lat",
       schedule: "Śr, Pt 18:00-19:30",
-      icon: "📣"
+      icon: "📣",
+      link: "https://checz.sportbm.com/",
+      image: "/img/cheerliding.jpg"
     },
     {
       title: "Padel",
       description: "Nowoczesny sport rakietowy łączący elementy tenisa i squasha. Dla dorosłych i młodzieży.",
       ageGroup: "14+ lat",
       schedule: "Codziennie",
-      icon: "🎾"
+      icon: "🎾",
+      link: "https://gdyniapadelclub.pl/",
+      image: "/img/padel.jpg"
     },
     {
-      title: "Fitness",
+      title: "Stay active",
       description: "Zajęcia fitness dostosowane do różnych poziomów zaawansowania. Zdrowie i kondycja dla każdego.",
       ageGroup: "16+ lat",
       schedule: "Pn, Śr, Pt 19:00-20:00",
-      icon: "💪"
+      icon: "💪",
+      image: "/img/fitness.jpg"
+    }
+  ];
+
+  const extraSections = [
+    {
+      title: "Sportowa Checz",
+      description: "Wydarzenia i aktywności sportowe dla całej społeczności Checzy.",
+      image: "/img/sportowachecz.jpg",
+      button: { label: "Zobacz wydarzenia", link: "https://www.facebook.com/sportowachecz" }
+    },
+    {
+      title: "Liga Podwórkowa",
+      description: "Amatorska liga piłkarska dla dzieci i młodzieży z okolicy.",
+      image: "/img/ligapodwórkowa.jpg",
+      button: { label: "Dowiedz się więcej", link: "/liga-podworkowa" }
+    },
+    {
+      title: "Ogród Sąsiedzki",
+      description: "Przestrzeń do wspólnego spędzania czasu, relaksu i integracji sąsiedzkiej.",
+      image: "/img/ogródsąsiedzki.jpg",
+      button: { label: "Poznaj inicjatywę", link: "https://www.facebook.com/sportowachecz/posts/978600477602398" }
     }
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50" id="sekcje">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800">Nasze Sekcje Sportowe</h2>
@@ -47,33 +74,62 @@ const SportSections = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {sections.map((section, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {section.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">{section.title}</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">{section.description}</p>
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center text-sm">
-                  <span className="font-semibold text-blue-600 mr-2">Wiek:</span>
-                  <span className="text-gray-700">{section.ageGroup}</span>
+            section.link ? (
+              <a
+                key={index}
+                href={section.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div
+                  className="relative h-96 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 group hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col justify-end"
+                  style={{ backgroundImage: `url('${section.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                >
+                  <div className="w-full bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 right-0 h-32 pointer-events-none"></div>
+                  <div className="relative z-10 p-6 flex items-end h-32">
+                    <span className="text-white text-xl font-bold drop-shadow-lg flex items-center gap-2">
+                      {section.title}
+                      <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-2 text-2xl">&raquo;</span>
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center text-sm">
-                  <span className="font-semibold text-blue-600 mr-2">Grafik:</span>
-                  <span className="text-gray-700">{section.schedule}</span>
+              </a>
+            ) : (
+              <div
+                key={index}
+                className="relative h-96 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 group hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col justify-end"
+                style={{ backgroundImage: `url('${section.image}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+              >
+                <div className="w-full bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 right-0 h-32 pointer-events-none"></div>
+                <div className="relative z-10 p-6 flex items-end h-32">
+                  <span className="text-white text-xl font-bold drop-shadow-lg flex items-center gap-2">
+                    {section.title}
+                    <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-2 text-2xl">&raquo;</span>
+                  </span>
                 </div>
               </div>
-              {section.link ? (
-                <Link to={section.link}>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                    Dowiedz się więcej
+            )
+          ))}
+        </div>
+        {/* Dodatkowe kafelki */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {extraSections.map((section, index) => (
+            <div key={index} className="relative h-80 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 group flex items-end hover:scale-105 hover:shadow-2xl">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url('${section.image}')` }}
+              ></div>
+              <div className="absolute inset-0 bg-black/70"></div>
+              <div className="relative z-10 p-6 w-full">
+                <h3 className="text-xl font-bold text-white mb-3">{section.title}</h3>
+                <p className="text-gray-200 mb-4 leading-relaxed">{section.description}</p>
+                <a href={section.button.link} target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+                    {section.button.label}
                   </Button>
-                </Link>
-              ) : (
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Dowiedz się więcej
-                </Button>
-              )}
+                </a>
+              </div>
             </div>
           ))}
         </div>
