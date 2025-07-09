@@ -1,3 +1,4 @@
+import { Users } from "lucide-react";
 
 const WhyChooseUs = () => {
   return (

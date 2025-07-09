@@ -88,9 +88,9 @@ const SportSections = () => {
                 >
                   <div className="w-full bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 right-0 h-32 pointer-events-none"></div>
                   <div className="relative z-10 p-6 flex items-end h-32">
-                    <span className="text-white text-xl font-bold drop-shadow-lg flex items-center gap-2">
+                    <span className="text-white text-3xl font-bold drop-shadow-lg flex items-center gap-2">
                       {section.title}
-                      <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-2 text-2xl">&raquo;</span>
+                      <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-5 text-4xl">&raquo;</span>
                     </span>
                   </div>
                 </div>
@@ -103,9 +103,9 @@ const SportSections = () => {
               >
                 <div className="w-full bg-gradient-to-t from-black/80 to-transparent absolute bottom-0 left-0 right-0 h-32 pointer-events-none"></div>
                 <div className="relative z-10 p-6 flex items-end h-32">
-                  <span className="text-white text-xl font-bold drop-shadow-lg flex items-center gap-2">
+                  <span className="text-white text-3xl font-bold drop-shadow-lg flex items-center gap-2">
                     {section.title}
-                    <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-2 text-2xl">&raquo;</span>
+                    <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-5 text-4xl">&raquo;</span>
                   </span>
                 </div>
               </div>
