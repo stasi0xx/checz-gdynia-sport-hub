@@ -48,9 +48,8 @@ const Hero = () => {
               Dołącz do nas<span className="ml-2 text-2xl">&rarr;</span>
             </Button>
             <Button
-              variant="outline"
               size="lg"
-              className="bg-transparent border-2 border-blue-500 text-blue-600 font-extrabold px-10 py-5 text-2xl rounded-2xl shadow-lg hover:bg-blue-50 hover:border-blue-600 hover:text-blue-800 hover:scale-105 transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-10 py-5 text-2xl rounded-2xl shadow-lg border-2 border-blue-600 hover:scale-105 transition-all duration-300"
             >
               Zarezerwuj boisko
             </Button>
