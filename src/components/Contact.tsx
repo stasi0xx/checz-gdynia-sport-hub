@@ -3,6 +3,35 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScpEFKY2tRXAcb4gbBGXmm5iy8wQtNXCvpN5oM91tFSWRs18g/formResponse";
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  const form = e.target as HTMLFormElement;
+  const data = new FormData(form);
+
+  // Zamień poniższe entry.xxxxx na swoje identyfikatory z Google Forms!
+  const payload = new URLSearchParams({
+    "entry.1127660953": data.get("imie") as string,
+    "entry.248888698": data.get("nazwisko") as string,
+    "entry.1938710591": data.get("wiek") as string,
+    "entry.937092977": data.get("sekcja") as string,
+    "entry.1016056112": data.get("email") as string,
+    "entry.816515353": data.get("telefon") as string,
+    "entry.1321395482": data.get("dodatkowe_informacje") as string,
+    // ...pozostałe pola
+  });
+
+  await fetch(GOOGLE_FORM_ACTION_URL, {
+    method: "POST",
+    mode: "no-cors",
+    body: payload,
+  });
+
+  // Możesz dodać info o sukcesie
+  alert("Dziękujemy za zgłoszenie!");
+};
+
 const Contact = () => {
   return (
     <section className="py-20 bg-white" id="kontakt">
@@ -25,7 +54,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Adres</h4>
-                    <p className="text-gray-600">ul. Sportowa 15, 81-374 Gdynia</p>
+                    <p className="text-gray-600">ul. Ludwika Zamenhofa 17, 81-218 Gdynia</p>
                   </div>
                 </div>
                 
@@ -63,27 +92,34 @@ const Contact = () => {
 
             <div className="bg-gray-100 p-6 rounded-2xl">
               <h4 className="font-semibold text-gray-800 mb-4">Lokalizacja</h4>
-              <div className="bg-blue-200 h-48 rounded-lg flex items-center justify-center">
-                <span className="text-blue-600 font-semibold">🗺️ Mapa (Google Maps)</span>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2314.861157888766!2d18.480616976325546!3d54.53594338505492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda6bd4639f00f%3A0x4e8c1f616d734cce!2sLudwika%20Zamenhofa%2017%2C%2081-218%20Gdynia!5e0!3m2!1spl!2spl!4v1752234998381!5m2!1spl!2spl"
+                width="100%"
+                height="192"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mapa dojazdu"
+              />
             </div>
           </div>
 
           <div className="bg-blue-50 p-8 rounded-2xl">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Formularz zapisu</h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Imię dziecka/uczestnika
                   </label>
-                  <Input placeholder="Wprowadź imię" />
+                  <Input name="imie" placeholder="Wprowadź imię" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Nazwisko
                   </label>
-                  <Input placeholder="Wprowadź nazwisko" />
+                  <Input name="nazwisko" placeholder="Wprowadź nazwisko" />
                 </div>
               </div>
               
@@ -91,14 +127,14 @@ const Contact = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Wiek uczestnika
                 </label>
-                <Input type="number" placeholder="Wprowadź wiek" />
+                <Input name="wiek" type="number" placeholder="Wprowadź wiek" />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Wybierz sekcję
                 </label>
-                <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <select name="sekcja" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                   <option>Piłka nożna dziewcząt</option>
                   <option>Cheerleading</option>
                   <option>Padel</option>
@@ -112,13 +148,13 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Email rodzica/opiekuna
                   </label>
-                  <Input type="email" placeholder="twoj@email.pl" />
+                  <Input name="email" type="email" placeholder="twoj@email.pl" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Telefon
                   </label>
-                  <Input type="tel" placeholder="+48 123 456 789" />
+                  <Input name="telefon" type="tel" placeholder="+48 123 456 789" />
                 </div>
               </div>
               
@@ -126,7 +162,7 @@ const Contact = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Dodatkowe informacje
                 </label>
-                <Textarea placeholder="Uwagi, pytania, informacje o doświadczeniu sportowym..." />
+                <Textarea name="dodatkowe_informacje" placeholder="Uwagi, pytania, informacje o doświadczeniu sportowym..." />
               </div>
               
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">

@@ -33,9 +33,7 @@ const Hero = () => {
           </div>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-light">
-            Padel, piłka nożna, cheerleading, fitness. Dla każdego.
-          </p>
+
           
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-6 justify-center mt-12 transition-all duration-700

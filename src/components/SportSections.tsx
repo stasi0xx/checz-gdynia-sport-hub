@@ -62,6 +62,28 @@ const SportSections = () => {
     }
   ];
 
+  // Nowe sekcje na dole
+  const extraSections2 = [
+    {
+      title: "Gdyńska Liga Darta",
+      description: "Rozgrywki darta dla pasjonatów i amatorów. Rywalizacja i dobra zabawa!",
+      image: "/img/planeta.webp",
+      button: { label: "Zobacz szczegóły", link: "https://www.facebook.com/gdynskaligadarta" }
+    },
+    {
+      title: "Liga 6 kobiet",
+      description: "Piłkarska liga szóstek dla kobiet. Sportowa rywalizacja i integracja.",
+      image: "/img/herb-chylonia.webp",
+      button: { label: "Dołącz do ligi", link: "https://www.facebook.com/ligaszostek" }
+    },
+    {
+      title: "Strefa Ninja",
+      description: "Tor przeszkód i zajęcia sprawnościowe inspirowane Ninja Warrior. Dla dzieci i dorosłych!",
+      image: "/img/fitness.jpg",
+      button: { label: "Sprawdź atrakcje", link: "https://www.facebook.com/sportowachecz/posts/978600477602398" }
+    }
+  ];
+
   return (
     <section className="py-20 bg-gray-50" id="sekcje">
       <div className="container mx-auto px-4">
@@ -115,6 +137,27 @@ const SportSections = () => {
         {/* Dodatkowe kafelki */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {extraSections.map((section, index) => (
+            <div key={index} className="relative h-80 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 group flex items-end hover:scale-105 hover:shadow-2xl">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url('${section.image}')` }}
+              ></div>
+              <div className="absolute inset-0 bg-black/70"></div>
+              <div className="relative z-10 p-6 w-full">
+                <h3 className="text-xl font-bold text-white mb-3">{section.title}</h3>
+                <p className="text-gray-200 mb-4 leading-relaxed">{section.description}</p>
+                <a href={section.button.link} target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
+                    {section.button.label}
+                  </Button>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* Nowe dodatkowe kafelki */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {extraSections2.map((section, index) => (
             <div key={index} className="relative h-80 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 group flex items-end hover:scale-105 hover:shadow-2xl">
               <div
                 className="absolute inset-0 bg-cover bg-center"
