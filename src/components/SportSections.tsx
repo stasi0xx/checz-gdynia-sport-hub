@@ -11,7 +11,7 @@ const SportSections = () => {
       schedule: "Wt, Czw 17:00-18:30",
       icon: "⚽",
       link: "https://checzgdynia.sportbm.com/",
-      image: "/img/pilka.jpg"
+      image: "/img/sekcje piłka nożna.jpg"
     },
     {
       title: "Cheerleading",
@@ -20,7 +20,7 @@ const SportSections = () => {
       schedule: "Śr, Pt 18:00-19:30",
       icon: "📣",
       link: "https://checz.sportbm.com/",
-      image: "/img/cheerliding.jpg"
+      image: "/img/sekcje cheerleading.jpg"
     },
     {
       title: "Padel",
@@ -29,7 +29,7 @@ const SportSections = () => {
       schedule: "Codziennie",
       icon: "🎾",
       link: "https://gdyniapadelclub.pl/",
-      image: "/img/padel.jpg"
+      image: "/img/sekcje padel.png"
     },
     {
       title: "Stay active",
@@ -49,10 +49,10 @@ const SportSections = () => {
       button: { label: "Zobacz wydarzenia", link: "https://www.facebook.com/sportowachecz" }
     },
     {
-      title: "Liga Podwórkowa",
+      title: "Gdyńska Liga Podwórkowa",
       description: "Amatorska liga piłkarska dla dzieci i młodzieży z okolicy.",
-      image: "/img/ligapodwórkowa.jpg",
-      button: { label: "Dowiedz się więcej", link: "/liga-podworkowa" }
+      image: "/img/liga podworkowa.jpg",
+      button: { label: "Dowiedz się więcej", link: "https://www.facebook.com/sportowachecz/posts/pfbid0gL86zvaAnSfiwwu1P22XkmCS6zUXHREUZQFTeTixZuN3KpJbDoQh1PePZeXrKyvbl" }
     },
     {
       title: "Ogród Sąsiedzki",
@@ -67,7 +67,7 @@ const SportSections = () => {
     {
       title: "Gdyńska Liga Darta",
       description: "Rozgrywki darta dla pasjonatów i amatorów. Rywalizacja i dobra zabawa!",
-      image: "/img/planeta.webp",
+      image: "/img/sekcja gdyńska liga stell darta.jpg",
       button: { label: "Zobacz szczegóły", link: "https://www.facebook.com/gdynskaligadarta" }
     },
     {
