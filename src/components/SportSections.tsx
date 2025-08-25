@@ -43,29 +43,13 @@ const SportSections = () => {
 
   const extraSections = [
     {
-      title: "Sportowa Checz",
-      description: "Wydarzenia i aktywności sportowe dla całej społeczności Checzy.",
-      image: "/img/sportowachecz.jpg",
-      button: { label: "Zobacz wydarzenia", link: "https://www.facebook.com/sportowachecz" }
-    },
-    {
       title: "Gdyńska Liga Podwórkowa",
       description: "Amatorska liga piłkarska dla dzieci i młodzieży z okolicy.",
       image: "/img/liga podworkowa.jpg",
       button: { label: "Dowiedz się więcej", link: "https://www.facebook.com/sportowachecz/posts/pfbid0gL86zvaAnSfiwwu1P22XkmCS6zUXHREUZQFTeTixZuN3KpJbDoQh1PePZeXrKyvbl" }
     },
     {
-      title: "Ogród Sąsiedzki",
-      description: "Przestrzeń do wspólnego spędzania czasu, relaksu i integracji sąsiedzkiej.",
-      image: "/img/ogródsąsiedzki.jpg",
-      button: { label: "Poznaj inicjatywę", link: "https://www.facebook.com/sportowachecz/posts/978600477602398" }
-    }
-  ];
-
-  // Nowe sekcje na dole
-  const extraSections2 = [
-    {
-      title: "Gdyńska Liga Darta",
+      title: "Gdyńska Liga Stell Darta",
       description: "Rozgrywki darta dla pasjonatów i amatorów. Rywalizacja i dobra zabawa!",
       image: "/img/sekcja gdyńska liga stell darta.jpg",
       button: { label: "Zobacz szczegóły", link: "https://www.facebook.com/gdynskaligadarta" }
@@ -76,11 +60,31 @@ const SportSections = () => {
       image: "/img/herb-chylonia.webp",
       button: { label: "Dołącz do ligi", link: "https://www.facebook.com/ligaszostek" }
     },
+
+
+
+  ];
+
+  // Nowe sekcje na dole
+  const extraSections2 = [
+
+    {
+      title: "Sportowa Checz",
+      description: "Wydarzenia i aktywności sportowe dla całej społeczności Checzy.",
+      image: "/img/sportowachecz.jpg",
+      button: { label: "Zobacz wydarzenia", link: "https://www.facebook.com/sportowachecz" }
+    },
     {
       title: "Strefa Ninja",
       description: "Tor przeszkód i zajęcia sprawnościowe inspirowane Ninja Warrior. Dla dzieci i dorosłych!",
-      image: "/img/fitness.jpg",
+      image: "/img/torNinja.jpg",
       button: { label: "Sprawdź atrakcje", link: "https://www.facebook.com/sportowachecz/posts/978600477602398" }
+    },
+    {
+      title: "Ogród Sąsiedzki",
+      description: "Przestrzeń do wspólnego spędzania czasu, relaksu i integracji sąsiedzkiej.",
+      image: "/img/ogródsąsiedzki.jpg",
+      button: { label: "Poznaj inicjatywę", link: "https://www.facebook.com/sportowachecz/posts/978600477602398" }
     }
   ];
 

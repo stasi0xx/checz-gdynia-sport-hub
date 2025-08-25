@@ -1,20 +1,28 @@
+
 import { useState } from "react";
 
 const Gallery = () => {
   const [expanded, setExpanded] = useState(false);
   const images = [
-    { src: "/img/galeria 1.jpg", alt: "Treningi piłki nożnej", category: "Piłka nożna" },
-    { src: "/img/galeria 2.jpg", alt: "Zajęcia cheerleading", category: "Cheerleading" },
-    { src: "/img/galeria 3.jpg", alt: "Kort padel", category: "Padel" },
-    { src: "/img/galeria 4.jpg", alt: "Sala fitness", category: "Fitness" },
     { src: "/img/galeria 5.jpg", alt: "Wydarzenia społeczne", category: "Wydarzenia" },
-    { src: "/img/galeria 6.jpg", alt: "Nagrody i sukcesy", category: "Sukcesy" },
+      { src: "/img/galeria 6.jpg", alt: "Nagrody i sukcesy", category: "Sukcesy" },
+    { src: "/img/galeria 2.jpg", alt: "Zajęcia cheerleading", category: "Cheerleading" },
+    { src: "/img/galeria 4.jpg", alt: "Sala fitness", category: "Fitness" },
+    {src: '/img/torNinja.jpg', alt: 'Tor Ninja', category: 'Tor Nina'},
+    {src: "/img/sekcja gdyńska liga stell darta.jpg", alt: "dart", category: "liga stell darta"},
+    { src: "/img/galeria 1.jpg", alt: "Treningi piłki nożnej", category: "Piłka nożna" },
+
+    { src: "/img/galeria 3.jpg", alt: "Kort padel", category: "Padel" },
+
+
+
     { src: "/img/galeria 7.jpg", alt: "Zdjęcie grupowe", category: "Piłka nożna"}
   ];
   const visibleImages = expanded ? images : images.slice(0, 6);
 
+
   return (
-    <>
+      <>
       {/* Sekcja z filmami */}
       <section className="py-16 bg-white" id="filmy">
         <div className="container mx-auto px-4">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import React, { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 
 const Hero = () => {
   const [showButtons, setShowButtons] = useState(false);
@@ -39,17 +40,21 @@ const Hero = () => {
           <div className={`flex flex-col sm:flex-row gap-6 justify-center mt-12 transition-all duration-700
   ${showButtons ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
 `}>
+              <Button
+                  asChild
+                  size="lg"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-black font-extrabold px-10 py-5 text-2xl rounded-2xl shadow-lg border-2 border-yellow-400 hover:scale-105 transition-all duration-300 flex items-center gap-3"
+              >
+                  <a href="#sekcje">
+                      Nasze sekcje<span className="ml-2 text-2xl">&rarr;</span>
+                  </a>
+              </Button>
             <Button
-              size="lg"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-extrabold px-10 py-5 text-2xl rounded-2xl shadow-lg border-2 border-yellow-400 hover:scale-105 transition-all duration-300 flex items-center gap-3"
-            >
-              Dołącz do nas<span className="ml-2 text-2xl">&rarr;</span>
-            </Button>
-            <Button
-              size="lg"
+              asChild
+                size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-10 py-5 text-2xl rounded-2xl shadow-lg border-2 border-blue-600 hover:scale-105 transition-all duration-300"
             >
-              Zarezerwuj boisko
+              <a href={'#kontakt'}>Dołącz do nas<span className="ml-2 text-2xl">&rarr;</span></a>
             </Button>
           </div>
         </div>

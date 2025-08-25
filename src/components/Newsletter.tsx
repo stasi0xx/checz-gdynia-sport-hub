@@ -14,9 +14,9 @@ const Newsletter = () => {
               Stowarzyszenie rozwoju sportu i rekreacji
             </p>
             <div className="flex justify-center space-x-6">
-              <a href="#" className="text-blue-100 hover:text-white transition-colors">Facebook</a>
+              <a href="https://www.facebook.com/sportowachecz" className="text-blue-100 hover:text-white transition-colors">Facebook</a>
               <a href="#" className="text-blue-100 hover:text-white transition-colors">Instagram</a>
-              <a href="#" className="text-blue-100 hover:text-white transition-colors">YouTube</a>
+              <a href="https://www.youtube.com/@checzgdynia1971" className="text-blue-100 hover:text-white transition-colors">YouTube</a>
             </div>
             <p className="text-sm text-blue-200">
               © 2024 CHECZ Gdynia. Wszystkie prawa zastrzeżone.
