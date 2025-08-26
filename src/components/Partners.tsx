@@ -83,7 +83,7 @@ const Partners = () => {
           </p>
           <Button asChild
               className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
-            <a href="https://www.facebook.com/sportowachecz" target="_blank">Skontakruj się z nami</a>
+            <a href="https://www.facebook.com/sportowachecz" target="_blank">Skontaktuj się z nami</a>
           </Button>
         </div>
       </div>
