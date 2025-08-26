@@ -37,7 +37,8 @@ const SportSections = () => {
       ageGroup: "16+ lat",
       schedule: "Pn, Śr, Pt 19:00-20:00",
       icon: "💪",
-      image: "/img/fitness.jpg"
+      link: "https://www.facebook.com/sportowachecz/posts/1319807183481724 ",
+      image: "/img/hantle.png"
     }
   ];
 
@@ -52,10 +53,10 @@ const SportSections = () => {
       title: "Gdyńska Liga Stell Darta",
       description: "Rozgrywki darta dla pasjonatów i amatorów. Rywalizacja i dobra zabawa!",
       image: "/img/sekcja gdyńska liga stell darta.jpg",
-      button: { label: "Zobacz szczegóły", link: "https://www.facebook.com/gdynskaligadarta" }
+      button: { label: "Zobacz szczegóły", link: "https://www.facebook.com/blyskawicagdynia" }
     },
     {
-      title: "Liga 6 kobiet",
+      title: "Queens of Six",
       description: "Piłkarska liga szóstek dla kobiet. Sportowa rywalizacja i integracja.",
       image: "/img/herb-chylonia.webp",
       button: { label: "Dołącz do ligi", link: "https://www.facebook.com/ligaszostek" }
@@ -78,7 +79,7 @@ const SportSections = () => {
       title: "Strefa Ninja",
       description: "Tor przeszkód i zajęcia sprawnościowe inspirowane Ninja Warrior. Dla dzieci i dorosłych!",
       image: "/img/torNinja.jpg",
-      button: { label: "Sprawdź atrakcje", link: "https://www.facebook.com/sportowachecz/posts/978600477602398" }
+      button: { label: "Sprawdź atrakcje", link: "https://www.facebook.com/reel/749569914515097" }
     },
     {
       title: "Ogród Sąsiedzki",

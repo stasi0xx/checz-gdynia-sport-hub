@@ -34,7 +34,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">kontakt@checzgdynia.pl</p>
+                    <p className="text-gray-600">info@checzgdynia.com</p>
                   </div>
                 </div>
 
@@ -45,9 +45,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800">Godziny biura</h4>
                     <p className="text-gray-600">
-                      Pn-Pt: 15:00-20:00
-                      <br />
-                      Sb: 9:00-15:00
+                      Pn-Pt: 12:00-20:00
                     </p>
                   </div>
                 </div>
