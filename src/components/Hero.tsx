@@ -9,6 +9,25 @@ const Hero = () => {
     setTimeout(() => setShowButtons(true), 200); // opóźnienie dla efektu
   }, []);
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.getAttribute("href");
+    if (!href || !href.startsWith("#")) return;
+
+    const id = href.slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    e.preventDefault();
+
+    const navHeight =
+      (document.querySelector("nav") as HTMLElement | null)?.offsetHeight ?? 0;
+
+    const y =
+      target.getBoundingClientRect().top + window.scrollY - navHeight;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
     <section
       className="relative min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden animate-hero-bg"
@@ -33,9 +52,6 @@ const Hero = () => {
             </p>
           </div>
           
-          {/* Subtitle */}
-
-          
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-6 justify-center mt-12 transition-all duration-700
   ${showButtons ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
@@ -45,7 +61,7 @@ const Hero = () => {
                   size="lg"
                   className="bg-yellow-400 hover:bg-yellow-500 text-black font-extrabold px-10 py-5 text-2xl rounded-2xl shadow-lg border-2 border-yellow-400 hover:scale-105 transition-all duration-300 flex items-center gap-3"
               >
-                  <a href="#sekcje">
+                  <a href="#sekcje" onClick={handleAnchorClick}>
                       Nasze sekcje<span className="ml-2 text-2xl">&rarr;</span>
                   </a>
               </Button>
@@ -54,7 +70,7 @@ const Hero = () => {
                 size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-10 py-5 text-2xl rounded-2xl shadow-lg border-2 border-blue-600 hover:scale-105 transition-all duration-300"
             >
-              <a href={'#kontakt'}>Dołącz do nas<span className="ml-2 text-2xl">&rarr;</span></a>
+              <a href="#kontakt" onClick={handleAnchorClick}>Dołącz do nas<span className="ml-2 text-2xl">&rarr;</span></a>
             </Button>
           </div>
         </div>
