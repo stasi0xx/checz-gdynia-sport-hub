@@ -38,7 +38,7 @@ const SportSections = () => {
       schedule: "Pn, Śr, Pt 19:00-20:00",
       icon: "💪",
       link: "https://www.facebook.com/sportowachecz/posts/1319807183481724 ",
-      image: "/img/trening.png"
+      image: "/img/hantle.png"
     }
   ];
 
