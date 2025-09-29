@@ -81,10 +81,16 @@ const Partners = () => {
           <p className="text-blue-100 mb-6">
             Wspieraj rozwój sportu w Gdyni i dołącz do grona naszych partnerów
           </p>
-          <Button asChild
-              className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
-            <a href="https://www.facebook.com/sportowachecz" target="_blank">Skontaktuj się z nami</a>
-          </Button>
+          <div className="space-x-4">
+            <Button asChild
+                className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+              <a href="/klub%20100%20nowy%20(1).pdf" target="_blank">Partnerem Drużyn Piłkarskich</a>
+            </Button>
+            <Button asChild
+                    className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
+              <a href="https://www.facebook.com/sportowachecz" target="_blank">Partnerem Grup Tanecznych</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
