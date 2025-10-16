@@ -89,7 +89,7 @@ const Partners = () => {
               </Button>
               <Button asChild
                       className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-300 w-full sm:w-auto">
-                <a href="https://www.facebook.com/sportowachecz" target="_blank">Partnerem Grup Tanecznych</a>
+                <a href="/Kopia – klub 100 nowy.pdf" target="_blank">Partnerem Grup Tanecznych</a>
               </Button>
             </div>
           </div>
