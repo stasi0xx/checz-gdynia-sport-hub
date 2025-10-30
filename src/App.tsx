@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import React from "react";
 import Navbar from "./components/Navbar";
+import { Analytics } from '@vercel/analytics/next';
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+
         </div>
       </BrowserRouter>
     </TooltipProvider>
