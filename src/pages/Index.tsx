@@ -6,6 +6,7 @@ import Gallery from "@/components/Gallery";
 import Partners from "@/components/Partners";
 import Contact from "@/components/Contact";
 import Newsletter from "@/components/Newsletter";
+import { Analytics } from '@vercel/analytics/next';
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <Partners />
       <Contact />
       <Newsletter />
+      <Analytics />
     </div>
   );
 };
