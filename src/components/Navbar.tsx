@@ -28,7 +28,9 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/" className="text-2xl font-bold text-black-700 tracking-widest">CHECZ GDYNIA</a>
+        <a href="/" className="text-2xl font-bold text-black-700 tracking-widest">
+          <img src="/logo.png" alt="Logo Checz Gdynia" width={150} height={75} />
+        </a>
         {/* Hamburger */}
         <button
           className="md:hidden flex flex-col justify-center items-center w-10 h-10"
