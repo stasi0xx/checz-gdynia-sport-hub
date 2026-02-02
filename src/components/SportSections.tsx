@@ -45,7 +45,7 @@ const SportSections = () => {
   const extraSections = [
     {
       title: "Gdyńska Liga Podwórkowa",
-      description: "Amatorska liga piłkarska dla dzieci i młodzieży z okolicy.",
+      description: "Amatorska liga piłkarska dla dzieci, młodzieży i dorosłych z okolicy.",
       image: "/img/liga podworkowa.jpg",
       button: { label: "Dowiedz się więcej", link: "https://www.facebook.com/sportowachecz/posts/pfbid0gL86zvaAnSfiwwu1P22XkmCS6zUXHREUZQFTeTixZuN3KpJbDoQh1PePZeXrKyvbl" }
     },
@@ -58,7 +58,7 @@ const SportSections = () => {
     {
       title: "Queens of Six",
       description: "Piłkarska liga szóstek dla kobiet. Sportowa rywalizacja i integracja.",
-      image: "/img/herb-chylonia.webp",
+      image: "/img/queens-of-six.webp",
       button: { label: "Dołącz do ligi", link: "https://www.facebook.com/ligaszostek" }
     },
 
